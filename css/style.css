@@ -1,21 +1,21 @@
-/* Colors from Swim theme: https://color.adobe.com/es/Swim-color-theme-506584 
-* dark-blue: #0388A6
-* light-blue: #04C4D9
-* light-turquoise: #04D9D9
-* dark-turquoise: #03A696
-* lighter-turquoise: #BBF2F2
+/* Colors from Red Watercolor Gradient theme: https://color.adobe.com/es/Red-Watercolor-Gradient-color-theme-10220705/ 
+* lightest-orange: #F2EBD5
+* lighter-orange: #F2AE30
+* orange: #F28F16
+* dark-orange: #D95A11
+* red: #BF1111
 */
 body {
 	font-family: 'Arial';
 	font-weight: 100;
-	color: #03A696;
+	color: #BF1111;
 }
 
 .clock {
 	position: relative;
 	width: 360px;
 	height: 360px;
-	background-color: #BBF2F2;
+	background-color: #F2EBD5;
 	border-radius: 50%;
 	overflow: auto;
 }
@@ -39,12 +39,11 @@ body {
 .btntop {
 	box-sizing: border-box;
 	text-align: center;
-	color: #BBF2F2;
+	color: #F2EBD5;
 	background: none;
-	background-color: #04C4D9;
+	background-color: #D95A11;
 	text-transform: uppercase;
 	border-radius: 50%;
-	border: 1px solid #009AED;
 	margin: 0;
 	outline: 0;
 	position: absolute;
@@ -54,36 +53,36 @@ body {
 	font-size: 18px;
 	padding: 20px;
 	border-top: 0;
-	border-bottom: 1px solid #04D9D9;
+	border-bottom: 1px solid #BF1111;
 }
 
 .btntop:hover {
-	background-color: #0388A6;
+	background-color: #BF1111;
 }
 
 .btnbottom {
 	box-sizing: border-box;
 	text-align: center;
-	color: #BBF2F2;
+	color: #F2EBD5;
 	background: none;
-	background-color: #04C4D9;
+	background-color: #D95A11;
 	text-transform: uppercase;
 	border-radius: 50%;
-	border: 1px solid #009AED;
 	margin: 0;
 	outline: 0;
 	position: absolute;
 	width: 100%;
-	font-size: 18px;
+	font-size: 32px;
+	font-weight: bold;
 	padding: 20px;
 	top: 260px;
 	bottom: 0;
-	border-top: 1px solid #04D9D9;
+	border-top: 1px solid #BF1111;
 	border-bottom: 0;
 }
 
 .btnbottom:hover {
-	background-color: #0388A6;
+	background-color: #BF1111;
 }
 
 .titletop {
@@ -93,8 +92,9 @@ body {
 	height: 200px;
 	text-align: center;
 	border-radius: 50%;
-	border-bottom: 3px solid #04D9D9;
-	background-color: #BBF2F2;
+	border-bottom: 3px solid #D95A11;
+	background-color: #F2AE30;
+	color: #F2EBD5;
 }
 
 .titletop p {
@@ -103,7 +103,7 @@ body {
     left: 80px;
     width: 200px;
     text-align: center;
-    font-size: x-large;	
+    font-size: 32px;	
 }
 
 .txt {
@@ -122,7 +122,8 @@ body {
 	top: 80px;
 	width: 100%;
 	text-align: center;
-	font-size: 32px;
+	font-size: 48px;
+	font-weight: bold;
 }
 
 .txt-title {
