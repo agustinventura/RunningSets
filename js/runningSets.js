@@ -1,4 +1,4 @@
-var sets = 5;
+var sets = 6;
 
 function init() {
 	hideNonVisibleDivs();
@@ -11,7 +11,7 @@ function hideNonVisibleDivs() {
 }
 
 function setInitialListeners() {
-	setClickListener($("#setsDone"), showStyles);
+	setClickListener($("#setsDone"), setsChange);
 	$(window).off('tizenhwkey');
     $(window).on('tizenhwkey', function(e) {
     	backPressed(e);
@@ -68,3 +68,5 @@ function goBack(activeDivId) {
 function exit() {
     tizen.application.getCurrentApplication().exit();
 }
+
+$(document).ready(init);
