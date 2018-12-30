@@ -99,14 +99,14 @@ body {
 
 .decrease {
 	position: absolute;
-    top: 125px;
+    top: 130px;
     left: 70px;
 }
 
 .increase {
 	position: absolute;
-    top: 125px;
-    left: 240px;
+    top: 130px;
+    left: 255px;
 }
 
 .titletop p {
@@ -132,7 +132,15 @@ body {
 	font-weight: bold;
 }
 
-.txt-title {
+.firstColumn {
+	padding-right: 5px;
+}
+
+.thirdColumn {
+	padding-left: 5px;
+}
+
+/*.txt-title {
 	text-transform: uppercase;
 	font-size: 32px;
 	font-weight: 200;
@@ -215,4 +223,4 @@ ul li:hover {
 
 .trainings {
 	padding-bottom: 80px;
-}
+}*/

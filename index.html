@@ -39,21 +39,51 @@
 	</div>
 	<div id="distanceScreen" class="clock">
 		<div class="container">
-			<div id="setsScreenTitle" class="titletop">
+			<div id="distanceScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseSets" src="./img/decrease.png" alt="Decrease sets"/>
+					<img id="decreaseDistance" src="./img/decrease.png" alt="Decrease distance"/>
 				</div>
-				<p>Series</p>
+				<p>Distancia</p>
 				<div class="increase">
-					<img id="increaseSets" src="./img/increase.png" alt="Increase sets"/>
+					<img id="increaseDistance" src="./img/increase.png" alt="Increase distance"/>
 				</div>
 			</div>
 			<div class="txt">
-				<div class="numberWithArrows">
-					<img id="upArrowSets" src="./img/up.png" alt="Increase sets"/>
-					<p id="setsNumber" class="txt-msg-center">5</p>
-					<img id="downArrowSets" src="./img/down.png" alt="Decrease sets"/>
-				</div>
+				<table class="numberWithArrows">
+					<tr>
+						<td class="firstColumn">
+							<img id="upArrowDistanceHectometers" src="./img/up.png" alt="Increase hectometers"/>
+						</td>
+						<td>
+							<img id="upArrowDistanceDecameters" src="./img/up.png" alt="Increase decameters"/>
+						</td>
+						<td class="thirdColumn">
+							<img id="upArrowDistanceMeters" src="./img/up.png" alt="Increase meters"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="firstColumn">
+							<span id="hectometers" class="txt-msg-center">0</span>
+						</td>
+						<td>
+							<span id="decameters" class="txt-msg-center">0</span>
+						</td>
+						<td class="thirdColumn">
+							<span id="meters" class="txt-msg-center">0</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="firstColumn">
+							<img id="downArrowDistanceHectometers" src="./img/down.png" alt="Decrease hectometers"/>
+						</td>
+						<td>
+							<img id="downArrowDistanceDecameters" src="./img/down.png" alt="Decrease decameters"/>
+						</td>
+						<td class="thirdColumn">
+							<img id="downArrowDistanceMeters" src="./img/down.png" alt="Decrease meters"/>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<button id="setsDone" class="btnbottom">Ya</button>
 		</div>
