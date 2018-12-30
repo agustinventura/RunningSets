@@ -97,6 +97,18 @@ body {
 	color: #F2EBD5;
 }
 
+.decrease {
+	position: absolute;
+    top: 125px;
+    left: 70px;
+}
+
+.increase {
+	position: absolute;
+    top: 125px;
+    left: 240px;
+}
+
 .titletop p {
 	position: absolute;
     top: 140px;
@@ -107,9 +119,6 @@ body {
 }
 
 .txt {
-	position: absolute;
-	top: 80px;
-	width: 100%;
 	text-align: center;
 }
 
@@ -118,10 +127,6 @@ body {
 }
 
 .txt-msg-center {
-	position: absolute;
-	top: 80px;
-	width: 100%;
-	text-align: center;
 	font-size: 48px;
 	font-weight: bold;
 }

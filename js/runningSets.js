@@ -2,21 +2,29 @@ var sets = 6;
 
 function init() {
 	hideNonVisibleDivs();
-    setInitialListeners();
-    $("#setsNumber").text(sets);
+	showSetsScreen();
 }
 
 function hideNonVisibleDivs() {
 	
 }
 
-function setInitialListeners() {
+function showSetsScreen() {
+	setSetsScreenListeners();
+    $("#setsNumber").text(sets);
+}
+
+function setSetsScreenListeners() {
+	setRotaryListener(setsChange);
+	setClickListener($("#decreaseSets"), decreaseSets);
+	setClickListener($("#increaseSets"), increaseSets);
+	setClickListener($("#upArrowSets"), increaseSets);
+	setClickListener($("#downArrowSets"), decreaseSets);
 	setClickListener($("#setsDone"), setsChange);
 	$(window).off('tizenhwkey');
     $(window).on('tizenhwkey', function(e) {
     	backPressed(e);
     });
-	setRotaryListener(setsChange);
 }
 
 function setsChange(ev) {
