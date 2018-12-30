@@ -111,11 +111,12 @@ body {
 
 .titletop p {
 	position: absolute;
-    top: 140px;
+    top: 130px;
     left: 80px;
     width: 200px;
     text-align: center;
-    font-size: 32px;	
+    font-size: 32px;
+    font-weight: bold;	
 }
 
 .txt {
