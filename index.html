@@ -11,6 +11,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/setsScreen.js"></script>
 <script src="js/distanceScreen.js"></script>
+<script src="js/restTimeScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -95,6 +96,66 @@
 				</div>
 			</div>
 			<button id="distanceDone" class="btnbottom">Ya</button>
+		</div>
+	</div>
+	<div id="restTimeScreen" class="clock">
+		<div class="container">
+			<div id="restTimeScreenTitle" class="titletop">
+				<div class="decrease">
+					<img id="decreaseRestTime" src="./img/decrease.png" alt="Decrease rest time"/>
+				</div>
+				<p>Descanso</p>
+				<div class="increase">
+					<img id="increaseRestTime" src="./img/increase.png" alt="Increase rest time"/>
+				</div>
+			</div>
+			<div class="txt">
+				<div class="magnitude">
+					<table class="numberWithArrows">
+						<tr>
+							<td class="firstColumn">
+								<img id="upArrowRestTimeHectoseconds" src="./img/up.png" alt="Increase hectoseconds"/>
+							</td>
+							<td>
+								<img id="upArrowRestTimeDecaseconds" src="./img/up.png" alt="Increase decaseconds"/>
+							</td>
+							<td class="thirdColumn">
+								<img id="upArrowRestTimeSeconds" src="./img/up.png" alt="Increase seconds"/>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="firstColumn">
+								<span id="hectoseconds" class="txt-msg-center">0</span>
+							</td>
+							<td>
+								<span id="decaseconds" class="txt-msg-center">0</span>
+							</td>
+							<td class="thirdColumn">
+								<span id="seconds" class="txt-msg-center">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="firstColumn">
+								<img id="downArrowRestTimeHectoseconds" src="./img/down.png" alt="Decrease hectoseconds"/>
+							</td>
+							<td>
+								<img id="downArrowRestTimeDecaseconds" src="./img/down.png" alt="Decrease decaseconds"/>
+							</td>
+							<td class="thirdColumn">
+								<img id="downArrowRestTimeSeconds" src="./img/down.png" alt="Decrease seconds"/>
+							</td>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="unit">
+					<span id="seconds" class="txt-msg-center">sgs</span>
+				</div>
+			</div>
+			<button id="restTimeDone" class="btnbottom">Ya</button>
 		</div>
 	</div>
 </body>

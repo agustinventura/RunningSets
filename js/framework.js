@@ -1,6 +1,7 @@
 function hideAllScreens() {
 	$("#setsScreen").hide();
 	$("#distanceScreen").hide();
+	$("#restTimeScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -34,6 +35,9 @@ function goBack(activeDivId) {
 			break;
 		case "distanceScreen":
 			showSetsScreen();
+			break;
+		case "restTimeScreen":
+			showDistanceScreen();
 			break;
 	}
 }

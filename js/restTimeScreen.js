@@ -1,23 +1,23 @@
-function initDistances() {
-	distances.set(DistancesEnum.METERS, 0);
-	distances.set(DistancesEnum.DECAMETERS, 5);
-	distances.set(DistancesEnum.HECTOMETERS, 0);
+function initRestTime() {
+	times.set(TimesEnum.SECONDS, 0);
+	times.set(TimesEnum.DECASECONDS, 6);
+	times.set(TimesEnum.HECTOSECONDS, 0);
 }
 
-function showDistanceScreen() {
+function showRestTimeScreen() {
 	hideAllScreens();
-	setDistanceScreenListeners();
-	setDistancesText();
-	$("#distanceScreen").show();
+	//setTimesScreenListeners();
+	setTimesText();
+	$("#restTimeScreen").show();
 }
 
-function setDistancesText() {
-	for (var distance in DistancesEnum) {
-		$("#"+DistancesEnum[distance]).text(distances.get(DistancesEnum[distance]));
+function setTimesText() {
+	for (var time in TimesEnum) {
+		$("#"+TimesEnum[time]).text(times.get(TimesEnum[time]));
 	}
 }
 
-function setDistanceScreenListeners() {
+/*function setDistanceScreenListeners() {
 	setRotaryListener(distanceChange);
 	setClickListener($("#decreaseDistance"), decreaseDistance);
 	setClickListener($("#increaseDistance"), increaseDistance);
@@ -77,7 +77,7 @@ function decreaseMeters() {
 
 function setDistance() {
 	distance = distances.get(DistancesEnum.HECTOMETERS) + "" + distances.get(DistancesEnum.DECAMETERS) + "" + distances.get(DistancesEnum.METERS);
-	showRestTimeScreen();
+	showRestScreen();
 }
 
 function distanceChange(ev) {
@@ -105,4 +105,4 @@ function increaseDistance() {
         distances.set(selectedDistance, distance);
         $("#"+selectedDistance).text(distances.get(selectedDistance));
     }
-}
+}*/
