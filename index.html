@@ -9,11 +9,35 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/setsScreen.js"></script>
+<script src="js/distanceScreen.js"></script>
 <script src="js/runningSets.js"></script>
+<script src="js/framework.js"></script>
 </head>
 
 <body>
 	<div id="setsScreen" class="clock">
+		<div class="container">
+			<div id="setsScreenTitle" class="titletop">
+				<div class="decrease">
+					<img id="decreaseSets" src="./img/decrease.png" alt="Decrease sets"/>
+				</div>
+				<p>Series</p>
+				<div class="increase">
+					<img id="increaseSets" src="./img/increase.png" alt="Increase sets"/>
+				</div>
+			</div>
+			<div class="txt">
+				<div class="numberWithArrows">
+					<img id="upArrowSets" src="./img/up.png" alt="Increase sets"/>
+					<p id="setsNumber" class="txt-msg-center">5</p>
+					<img id="downArrowSets" src="./img/down.png" alt="Decrease sets"/>
+				</div>
+			</div>
+			<button id="setsDone" class="btnbottom">Ya</button>
+		</div>
+	</div>
+	<div id="distanceScreen" class="clock">
 		<div class="container">
 			<div id="setsScreenTitle" class="titletop">
 				<div class="decrease">
