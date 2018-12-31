@@ -6,7 +6,7 @@ function initRestTime() {
 
 function showRestTimeScreen() {
 	hideAllScreens();
-	//setTimesScreenListeners();
+	setRestTimeScreenListeners();
 	setTimesText();
 	$("#restTimeScreen").show();
 }
@@ -17,92 +17,92 @@ function setTimesText() {
 	}
 }
 
-/*function setDistanceScreenListeners() {
-	setRotaryListener(distanceChange);
-	setClickListener($("#decreaseDistance"), decreaseDistance);
-	setClickListener($("#increaseDistance"), increaseDistance);
-	setClickListener($("#upArrowDistanceHectometers"), increaseHectometers);
-	setClickListener($("#upArrowDistanceDecameters"), increaseDecameters);
-	setClickListener($("#upArrowDistanceMeters"), increaseMeters);
-	setClickListener($("#hectometers"), selectHectometers);
-	setClickListener($("#decameters"), selectDecameters);
-	setClickListener($("#meters"), selectMeters);
-	setClickListener($("#downArrowDistanceHectometers"), decreaseHectometers);
-	setClickListener($("#downArrowDistanceDecameters"), decreaseDecameters);
-	setClickListener($("#downArrowDistanceMeters"), decreaseMeters);
-	setClickListener($("#distanceDone"), setDistance);
+function setRestTimeScreenListeners() {
+	setRotaryListener(timeChange);
+	setClickListener($("#decreaseRestTime"), decreaseTime);
+	setClickListener($("#increaseRestTime"), increaseTime);
+	setClickListener($("#upArrowRestTimeHectoseconds"), increaseHectoseconds);
+	setClickListener($("#upArrowRestTimeDecaseconds"), increaseDecaseconds);
+	setClickListener($("#upArrowRestTimeSeconds"), increaseSeconds);
+	setClickListener($("#hectoseconds"), selectHectoseconds);
+	setClickListener($("#decaseconds"), selectDecaseconds);
+	setClickListener($("#seconds"), selectSeconds);
+	setClickListener($("#downArrowRestTimeHectoseconds"), decreaseHectoseconds);
+	setClickListener($("#downArrowRestTimeDecaseconds"), decreaseDecaseconds);
+	setClickListener($("#downArrowRestTimeSeconds"), decreaseSeconds);
+	setClickListener($("#restTimeDone"), setTime);
 }
 
-function increaseHectometers() {
-	selectedDistance = DistancesEnum.HECTOMETERS;
-	increaseDistance();
+function increaseHectoseconds() {
+	selectedRestTime = TimesEnum.HECTOSECONDS;
+	increaseTime();
 }
 
-function increaseDecameters() {
-	selectedDistance = DistancesEnum.DECAMETERS;
-	increaseDistance();
+function increaseDecaseconds() {
+	selectedRestTime = TimesEnum.DECASECONDS;
+	increaseTime();
 }
 
-function increaseMeters() {
-	selectedDistance = DistancesEnum.METERS;
-	increaseDistance();
+function increaseSeconds() {
+	selectedRestTime = TimesEnum.SECONDS;
+	increaseTime();
 }
 
-function selectHectometers() {
-	selectedDistance = DistancesEnum.HECTOMETERS;
+function selectHectoseconds() {
+	selectedDistance = TimesEnum.HECTOSECONDS;
 }
 
-function selectDecameters() {
-	selectedDistance = DistancesEnum.DECAMETERS;
+function selectDecaseconds() {
+	selectedRestTime = TimesEnum.DECASECONDS;
 }
 
-function selectMeters() {
-	selectedDistance = DistancesEnum.METERS;
+function selectSeconds() {
+	selectedRestTime = TimesEnum.SECONDS;
 }
 
-function decreaseHectometers() {
-	selectedDistance = DistancesEnum.HECTOMETERS;
-	decreaseDistance();
+function decreaseHectoseconds() {
+	selectedRestTime = TimesEnum.HECTOSECONDS;
+	decreaseTime();
 }
 
-function decreaseDecameters() {
-	selectedDistance = DistancesEnum.DECAMETERS;
-	decreaseDistance();
+function decreaseDecaseconds() {
+	selectedRestTime = TimesEnum.DECASECONDS;
+	decreaseTime();
 }
 
-function decreaseMeters() {
-	selectedDistance = DistancesEnum.METERS;
-	decreaseDistance();
+function decreaseSeconds() {
+	selectedRestTime = TimesEnum.SECONDS;
+	decreaseTime();
 }
 
-function setDistance() {
-	distance = distances.get(DistancesEnum.HECTOMETERS) + "" + distances.get(DistancesEnum.DECAMETERS) + "" + distances.get(DistancesEnum.METERS);
+function setTime() {
+	time = times.get(TimesEnum.HECTOSECONDS) + "" + times.get(TimesEnum.DECASECONDS) + "" + times.get(TimesEnum.SECONDS);
 	showRestScreen();
 }
 
-function distanceChange(ev) {
+function timeChange(ev) {
 	var direction = ev.detail.direction;
     if (direction === "CW") {
-        increaseDistance();
+        increaseTime();
     } else {
-        decreaseDistance();
+        decreaseTime();
     }
 }
 
-function decreaseDistance() {
-	var distance = distances.get(selectedDistance);
-    if (distance > 0) {
-        distance--;
-        distances.set(selectedDistance, distance);
-        $("#"+selectedDistance).text(distances.get(selectedDistance));
+function decreaseTime() {
+	var time = times.get(selectedRestTime);
+    if (time > 0) {
+    	time--;
+    	times.set(selectedRestTime, time);
+        $("#"+selectedRestTime).text(times.get(selectedRestTime));
     }
 }
 
-function increaseDistance() {
-	var distance = distances.get(selectedDistance);
-    if (distance < 9) {
-        distance++;
-        distances.set(selectedDistance, distance);
-        $("#"+selectedDistance).text(distances.get(selectedDistance));
+function increaseTime() {
+	var time = times.get(selectedRestTime);
+    if (time < 9) {
+        time++;
+        times.set(selectedRestTime, time);
+        $("#"+selectedRestTime).text(times.get(selectedRestTime));
     }
-}*/
+}
