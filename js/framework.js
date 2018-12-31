@@ -4,6 +4,7 @@ function hideAllScreens() {
 	$("#restTimeScreen").hide();
 	$("#readyScreen").hide();
 	$("#countdownScreen").hide();
+	$("#currentSetScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -51,5 +52,6 @@ function goBack(activeDivId) {
 }
 
 function exit() {
+	tizen.power.release("SCREEN");
     tizen.application.getCurrentApplication().exit();
 }

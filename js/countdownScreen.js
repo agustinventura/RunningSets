@@ -11,7 +11,7 @@ function showCountdownScreen() {
 function countdown(seconds) {
     if (seconds === 1) {
     	stopInterval();
-        //showSeriesScreen();
+        showCurrentSetScreen();
     } else {
         countdownInterval = setInterval(function () {
             refreshSeconds();
@@ -28,7 +28,7 @@ function refreshSeconds() {
     countdownSeconds--;
     if (countdownSeconds === 0) {
     	stopInterval();
-        //showSeriesScreen();
+        showCurrentSetScreen();
     } else {
     	$("#countdownSeconds").text(countdownSeconds);
     }

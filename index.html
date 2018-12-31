@@ -14,6 +14,7 @@
 <script src="js/restTimeScreen.js"></script>
 <script src="js/readyScreen.js"></script>
 <script src="js/countdownScreen.js"></script>
+<script src="js/currentSetScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -203,6 +204,20 @@
 		<div class="container">
 			<p id="countdownSeconds" class="txt-msg-countdown">3</p>
 		</div>
+	</div>
+	<div id="currentSetScreen" class="clock">
+		<div class="container">
+			<div id="currentSetScreenTitle" class="titletop">
+				<div class="decrease">
+					<img id="decreaseCurrentSet" src="./img/decrease.png" alt="End current set"/>
+				</div>
+				<p>Serie</p>
+				<div class="increase">
+					<img id="increaseCurrentSet" src="./img/increase.png" alt="End current set"/>
+				</div>
+			</div>
+		</div>
+		<button id="setsDone" class="btnbottom">Terminé</button>
 	</div>
 </body>
 </html>
