@@ -3,6 +3,7 @@ function hideAllScreens() {
 	$("#distanceScreen").hide();
 	$("#restTimeScreen").hide();
 	$("#readyScreen").hide();
+	$("#countdownScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -39,6 +40,9 @@ function goBack(activeDivId) {
 			break;
 		case "restTimeScreen":
 			showDistanceScreen();
+			break;
+		case "readyScreen":
+			showRestTimeScreen();
 			break;
 	}
 }

@@ -13,6 +13,7 @@
 <script src="js/distanceScreen.js"></script>
 <script src="js/restTimeScreen.js"></script>
 <script src="js/readyScreen.js"></script>
+<script src="js/countdownScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -174,7 +175,7 @@
 								<span id="setsReview" class="txt-msg">Series</span>
 							</td>
 							<td class="rightCell">
-								<span id="distancePerSet" class="txt-msg">0</span>
+								<span id="totalSets" class="txt-msg">0</span>
 							</td>
 						</tr>
 						<tr>
@@ -196,6 +197,11 @@
 					</table>
 			</div>
 			<button id="letsgo" class="btnbottom">Si</button>
+		</div>
+	</div>
+	<div id="countdownScreen" class="clock">
+		<div class="container">
+			<p id="countdownSeconds" class="txt-msg-countdown">3</p>
 		</div>
 	</div>
 </body>

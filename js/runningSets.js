@@ -17,6 +17,7 @@ var selectedDistance = DistancesEnum.DECAMETERS;
 var times = new Map();
 var restTime = 60;
 var selectedRestTime = TimesEnum.SECONDS;
+var countdownSeconds = 3;
 
 function init() {
 	setBackKeyListener();
