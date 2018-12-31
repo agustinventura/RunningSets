@@ -44,6 +44,9 @@ function goBack(activeDivId) {
 		case "readyScreen":
 			showRestTimeScreen();
 			break;
+		case "countdownScreen":
+			showReadyScreen();
+			break;
 	}
 }
 

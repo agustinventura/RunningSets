@@ -3,14 +3,15 @@ var countdownInterval = null;
 function showCountdownScreen() {
 	hideAllScreens();
 	countdownSeconds = 3;
-	countdown(countdownSeconds);
+	$("#countdownSeconds").text(countdownSeconds);
 	$("#countdownScreen").show();
+	countdown(countdownSeconds);
 }
 
 function countdown(seconds) {
     if (seconds === 1) {
     	stopInterval();
-        //showSerieScreen();
+        //showSeriesScreen();
     } else {
         countdownInterval = setInterval(function () {
             refreshSeconds();
@@ -27,7 +28,7 @@ function refreshSeconds() {
     countdownSeconds--;
     if (countdownSeconds === 0) {
     	stopInterval();
-        //showSerieScreen();
+        //showSeriesScreen();
     } else {
     	$("#countdownSeconds").text(countdownSeconds);
     }
