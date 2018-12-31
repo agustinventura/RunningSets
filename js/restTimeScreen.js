@@ -77,7 +77,7 @@ function decreaseSeconds() {
 
 function setTime() {
 	time = times.get(TimesEnum.HECTOSECONDS) + "" + times.get(TimesEnum.DECASECONDS) + "" + times.get(TimesEnum.SECONDS);
-	showRestScreen();
+	showReadyScreen();
 }
 
 function timeChange(ev) {

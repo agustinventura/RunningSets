@@ -2,6 +2,7 @@ function hideAllScreens() {
 	$("#setsScreen").hide();
 	$("#distanceScreen").hide();
 	$("#restTimeScreen").hide();
+	$("#readyScreen").hide();
 }
 
 function setClickListener(element, listener) {

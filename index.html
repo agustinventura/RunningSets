@@ -12,6 +12,7 @@
 <script src="js/setsScreen.js"></script>
 <script src="js/distanceScreen.js"></script>
 <script src="js/restTimeScreen.js"></script>
+<script src="js/readyScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -156,6 +157,45 @@
 				</div>
 			</div>
 			<button id="restTimeDone" class="btnbottom">Ya</button>
+		</div>
+	</div>
+	<div id="readyScreen" class="clock">
+		<div class="container">
+			<button id="notReady" class="btntop">No</button>
+			<div class="txt">
+				<table class="sumUpData">
+						<tr>
+							<td colspan="2" class="sumUpTitle">
+								<span id="setsReview" class="txt-msg">¿Listo?</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="leftCell">
+								<span id="setsReview" class="txt-msg">Series</span>
+							</td>
+							<td class="rightCell">
+								<span id="distancePerSet" class="txt-msg">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="leftCell">
+								<span id="distanceReview" class="txt-msg">Distancia</span>
+							</td>
+							<td class="rightCell">
+								<span id="distancePerSet" class="txt-msg">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="leftCell">
+								<span id="restTimeReview" class="txt-msg">Descanso</span>
+							</td>
+							<td class="rightCell">
+								<span id="restTimePerSet" class="txt-msg">0</span>
+							</td>
+						</tr>
+					</table>
+			</div>
+			<button id="letsgo" class="btnbottom">Si</button>
 		</div>
 	</div>
 </body>

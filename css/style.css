@@ -38,22 +38,23 @@ body {
 
 .btntop {
 	box-sizing: border-box;
-	text-align: center;
-	color: #F2EBD5;
-	background: none;
-	background-color: #D95A11;
-	text-transform: uppercase;
-	border-radius: 50%;
-	margin: 0;
-	outline: 0;
-	position: absolute;
-	top: -100px;
-	width: 100%;
-	height: 200px;
-	font-size: 18px;
-	padding: 20px;
-	border-top: 0;
-	border-bottom: 1px solid #BF1111;
+    text-align: center;
+    color: #F2EBD5;
+    background: none;
+    background-color: #D95A11;
+    text-transform: uppercase;
+    border-radius: 50%;
+    margin: 0;
+    outline: 0;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 200px;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 100px;
+    border-top: 0;
+    border-bottom: 1px solid #BF1111;
 }
 
 .btntop:hover {
@@ -151,6 +152,36 @@ body {
     float: right;
     padding-top: 55px;
     padding-right: 25px;
+}
+
+.sumUpData {
+	width: 100%;
+}
+
+.sumUpTitle {
+	font-size: 32px;
+	font-weight: bold;
+	color: #F28F16;
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+
+.leftCell {
+	text-align: right;
+	width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+	padding: 0px 10px 5px 0px;
+}
+
+.rightCell {
+	text-align: left;
+	width: 30%;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+	padding: 0px 0px 5px 10px;
 }
 /*.txt-title {
 	text-transform: uppercase;
