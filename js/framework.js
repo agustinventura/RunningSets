@@ -5,6 +5,7 @@ function hideAllScreens() {
 	$("#readyScreen").hide();
 	$("#countdownScreen").hide();
 	$("#currentSetScreen").hide();
+	$("#pauseScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -56,5 +57,6 @@ function goBack(activeDivId) {
 
 function exit() {
 	tizen.power.release("SCREEN");
+	tizen.humanactivitymonitor.stop('HRM');
     tizen.application.getCurrentApplication().exit();
 }

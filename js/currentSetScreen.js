@@ -23,7 +23,14 @@ function setCurrentSetScreenListeners() {
 }
 
 function currentSetPause() {
-	//showPauseScreen();
+	stopChrono();
+	showPauseScreen();
+}
+
+function currentSetResume() {
+	hideAllScreens();
+	startChrono();
+	$("#currentSetScreen").show();
 }
 
 function currentSetEnd() {
@@ -34,10 +41,14 @@ function currentSetEnd() {
 function clearCurrentSetState() {
 	setStartAudio = null;
 	milliseconds = null;
-	clearInterval(setTimer);
-	setTimer = null;
+	stopChrono();
 	tizen.power.release("SCREEN");
 	tizen.humanactivitymonitor.stop('HRM');
+}
+
+function stopChrono() {
+	clearInterval(setTimer);
+	setTimer = null;
 }
 
 function startSet() {
@@ -58,7 +69,7 @@ function startChrono() {
 }
 
 function hrmListener(hrmInfo) {
-	var currentHeartRate = prependZerosIfNeeded(hrmInfo.heartRate);
+	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
 	$("#BPM").text(currentHeartRate);
 }
 
