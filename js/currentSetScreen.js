@@ -37,6 +37,7 @@ function clearCurrentSetState() {
 	clearInterval(setTimer);
 	setTimer = null;
 	tizen.power.release("SCREEN");
+	tizen.humanactivitymonitor.stop('HRM');
 }
 
 function startSet() {
@@ -49,10 +50,16 @@ function startSet() {
 	$("#currentSet").text(currentSet);
 	$("#totalSets").text(sets);
 	startChrono();
+	tizen.humanactivitymonitor.start('HRM', hrmListener);
 }
 
 function startChrono() {
 	setTimer = setInterval(refreshSetMilliseconds, 1);
+}
+
+function hrmListener(hrmInfo) {
+	var currentHeartRate = prependZerosIfNeeded(hrmInfo.heartRate);
+	$("#BPM").text(currentHeartRate);
 }
 
 function refreshSetMilliseconds() {
