@@ -6,6 +6,7 @@ function hideAllScreens() {
 	$("#countdownScreen").hide();
 	$("#currentSetScreen").hide();
 	$("#pauseScreen").hide();
+	$("#restScreen").hide();
 }
 
 function setClickListener(element, listener) {

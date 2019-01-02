@@ -1,5 +1,4 @@
 var setStartAudio = null;
-var currentSet = 0;
 var milliseconds = new Date(0);
 var setTimer = null;
 
@@ -29,13 +28,18 @@ function currentSetPause() {
 
 function currentSetResume() {
 	hideAllScreens();
+	setCurrentSetScreenListeners();
 	startChrono();
 	$("#currentSetScreen").show();
 }
 
 function currentSetEnd() {
 	clearCurrentSetState();
-	//showRestScreen();
+	if (currentSet === sets) {
+		//showEndScreen();
+	} else {
+		showRestScreen();
+	}
 }
 
 function clearCurrentSetState() {
@@ -70,7 +74,7 @@ function startChrono() {
 
 function hrmListener(hrmInfo) {
 	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
-	$("#BPM").text(currentHeartRate);
+	$("#setBPM").text(currentHeartRate);
 }
 
 function refreshSetMilliseconds() {

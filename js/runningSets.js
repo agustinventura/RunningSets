@@ -18,6 +18,7 @@ var times = new Map();
 var restTime = 60;
 var selectedRestTime = TimesEnum.SECONDS;
 var countdownSeconds = 3;
+var currentSet = 0;
 
 function init() {
 	setBackKeyListener();

@@ -239,7 +239,7 @@
 					<span id="currentSetMinutes">00</span>:<span id="currentSetSeconds">00</span><span id="currentSetMilliseconds" class="txt-msg">000</span>
 				</div>
 				<div class="txt-msg-bpm">
-					<span id="BPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
+					<span id="setBPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
 				</div>
 			</div>
 			<button id="currentSetDone" class="btnbottom">Terminé</button>
@@ -248,10 +248,51 @@
 	<div id="pauseScreen" class="clock">
 		<div class="container">
 			<button id="exit" class="btnleft">Si</button>
-			<p id="pause" class="txt-msg-center">Pausa</p>
-			<p id="pauseSeparator" class="txt-msg-center">&nbsp;</p>
-			<p id="exit" class="txt-msg-center">¿Salir?</p>
+			<div class="txt">
+				<p class="txt-msg-center">Pausa</p>
+				<p class="txt-msg-center">&nbsp;</p>
+				<p class="txt-msg-center">¿Salir?</p>
+			</div>
 			<button id="continue" class="btnright">No</button>
+		</div>
+	</div>
+	<div id="restScreen" class="clock">
+		<div class="container">
+			<div id="restScreenTitle" class="titletop">
+				<div class="decrease">
+					<img id="decreaseRest" src="./img/decrease.png" alt="End current rest"/>
+				</div>
+				<table>
+					<tr>
+						<td colspan="3">
+						Descanso
+						</td>
+					</tr>
+					<tr>
+						<td id="currentSetRest">
+						0
+						</td>
+						<td>
+						/
+						</td>
+						<td id="totalSetsRest">
+						0
+						</td>
+					</tr>
+				</table>
+				<div class="increase">
+					<img id="increaseCurrentRest" src="./img/increase.png" alt="End current rest"/>
+				</div>
+			</div>
+			<div class="txt">
+				<div class="txt-msg-center">
+					<span id="currentRestMinutes">00</span>:<span id="currentRestSeconds">00</span><span id="currentRestMilliseconds" class="txt-msg">000</span>
+				</div>
+				<div class="txt-msg-bpm">
+					<span id="restBPM">000</span>&nbsp;<span id="currentRestBPM" class="txt-msg">BPM</span>
+				</div>
+			</div>
+			<button id="currentRestDone" class="btnbottom">¡Vamos!</button>
 		</div>
 	</div>
 </body>
