@@ -176,7 +176,7 @@
 								<span id="setsReview" class="txt-msg">Series</span>
 							</td>
 							<td class="rightCell">
-								<span id="totalSets" class="txt-msg">0</span>
+								<span id="totalSetsReview" class="txt-msg">0</span>
 							</td>
 						</tr>
 						<tr>
@@ -211,13 +211,38 @@
 				<div class="decrease">
 					<img id="decreaseCurrentSet" src="./img/decrease.png" alt="End current set"/>
 				</div>
-				<p>Serie</p>
+				<table>
+					<tr>
+						<td colspan="3">
+						Serie
+						</td>
+					</tr>
+					<tr>
+						<td id="currentSet">
+						0
+						</td>
+						<td>
+						/
+						</td>
+						<td id="totalSets">
+						0
+						</td>
+					</tr>
+				</table>
 				<div class="increase">
 					<img id="increaseCurrentSet" src="./img/increase.png" alt="End current set"/>
 				</div>
 			</div>
+			<div class="txt">
+				<div class="txt-msg-center">
+					<span id="currentSetMinutes">00</span>:<span id="currentSetSeconds">00</span><span id="currentSetMilliseconds" class="txt-msg">000</span>
+				</div>
+				<div class="txt-msg-bpm">
+					<span id="BPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
+				</div>
+			</div>
+			<button id="currentSetDone" class="btnbottom">Terminé</button>
 		</div>
-		<button id="setsDone" class="btnbottom">Terminé</button>
 	</div>
 </body>
 </html>

@@ -120,6 +120,16 @@ body {
     font-weight: bold;	
 }
 
+.titletop table {
+	position: absolute;
+    top: 115px;
+    left: 130px;
+    width: 100px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;	
+}
+
 .txt {
 	width: 100%;
 	text-align: center;
@@ -187,6 +197,12 @@ body {
 .txt-msg-countdown {
 	font-size: 148px;
 	font-weight: bold;
+}
+
+.txt-msg-bpm {
+	font-size: 48px;
+	font-weight: bold;
+	padding-top: 20px;
 }
 
 /*.txt-title {

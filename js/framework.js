@@ -48,6 +48,9 @@ function goBack(activeDivId) {
 		case "countdownScreen":
 			showReadyScreen();
 			break;
+		case "currentSetScreen":
+			currentSetPause();
+			break;
 	}
 }
 
