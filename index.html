@@ -16,6 +16,7 @@
 <script src="js/countdownScreen.js"></script>
 <script src="js/currentSetScreen.js"></script>
 <script src="js/pauseScreen.js"></script>
+<script src="js/currentRestScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -256,11 +257,11 @@
 			<button id="continue" class="btnright">No</button>
 		</div>
 	</div>
-	<div id="restScreen" class="clock">
+	<div id="currentRestScreen" class="clock">
 		<div class="container">
-			<div id="restScreenTitle" class="titletop">
+			<div id="currentRestScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseRest" src="./img/decrease.png" alt="End current rest"/>
+					<img id="decreaseCurrentRest" src="./img/decrease.png" alt="End current rest"/>
 				</div>
 				<table>
 					<tr>
@@ -269,13 +270,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td id="currentSetRest">
+						<td id="currentSetCurrentRest">
 						0
 						</td>
 						<td>
 						/
 						</td>
-						<td id="totalSetsRest">
+						<td id="totalSetsCurrentRest">
 						0
 						</td>
 					</tr>
@@ -289,7 +290,7 @@
 					<span id="currentRestMinutes">00</span>:<span id="currentRestSeconds">00</span><span id="currentRestMilliseconds" class="txt-msg">000</span>
 				</div>
 				<div class="txt-msg-bpm">
-					<span id="restBPM">000</span>&nbsp;<span id="currentRestBPM" class="txt-msg">BPM</span>
+					<span id="currentRestBPM">000</span>&nbsp;<span id="currentRestBPMtext" class="txt-msg">BPM</span>
 				</div>
 			</div>
 			<button id="currentRestDone" class="btnbottom">¡Vamos!</button>

@@ -1,5 +1,4 @@
 var setStartAudio = null;
-var milliseconds = new Date(0);
 var setTimer = null;
 
 function showCurrentSetScreen() {
@@ -22,14 +21,14 @@ function setCurrentSetScreenListeners() {
 }
 
 function currentSetPause() {
-	stopChrono();
-	showPauseScreen();
+	stopSetChrono();
+	showPauseScreen("currentSetScreen");
 }
 
 function currentSetResume() {
 	hideAllScreens();
 	setCurrentSetScreenListeners();
-	startChrono();
+	startSetChrono();
 	$("#currentSetScreen").show();
 }
 
@@ -38,19 +37,19 @@ function currentSetEnd() {
 	if (currentSet === sets) {
 		//showEndScreen();
 	} else {
-		showRestScreen();
+		showCurrentRestScreen();
 	}
 }
 
 function clearCurrentSetState() {
 	setStartAudio = null;
 	milliseconds = null;
-	stopChrono();
+	stopSetChrono();
 	tizen.power.release("SCREEN");
 	tizen.humanactivitymonitor.stop('HRM');
 }
 
-function stopChrono() {
+function stopSetChrono() {
 	clearInterval(setTimer);
 	setTimer = null;
 }
@@ -64,38 +63,29 @@ function startSet() {
 	currentSet++;
 	$("#currentSet").text(currentSet);
 	$("#totalSets").text(sets);
-	startChrono();
-	tizen.humanactivitymonitor.start('HRM', hrmListener);
+	startSetChrono();
+	tizen.humanactivitymonitor.start('HRM', setHrmListener);
 }
 
-function startChrono() {
+function startSetChrono() {
 	setTimer = setInterval(refreshSetMilliseconds, 1);
 }
 
-function hrmListener(hrmInfo) {
+function setHrmListener(hrmInfo) {
 	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
 	$("#setBPM").text(currentHeartRate);
 }
 
 function refreshSetMilliseconds() {
 	milliseconds.setMilliseconds(milliseconds.getMilliseconds()+1);
-	setFormattedTime();
+	setCurrentSetFormattedTime();
 }
 
-function setFormattedTime() {
+function setCurrentSetFormattedTime() {
 	var formattedMinutes = preprendZerosIfNeeded(milliseconds.getMinutes(), 2);
 	$("#currentSetMinutes").text(formattedMinutes);
 	var formattedSeconds = preprendZerosIfNeeded(milliseconds.getSeconds(), 2);
 	$("#currentSetSeconds").text(formattedSeconds);
 	var formattedMilliseconds = preprendZerosIfNeeded(milliseconds.getMilliseconds(), 3);
 	$("#currentSetMilliseconds").text(formattedMilliseconds);
-}
-
-function preprendZerosIfNeeded(number, size) {
-	var numberLength = number.toString().length;
-	var numberOfZeroes = size - numberLength;
-	for (var i=0; i<numberOfZeroes; i++) {
-		number = "0" + number;
-	}
-	return number;
 }

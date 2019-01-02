@@ -6,7 +6,7 @@ function hideAllScreens() {
 	$("#countdownScreen").hide();
 	$("#currentSetScreen").hide();
 	$("#pauseScreen").hide();
-	$("#restScreen").hide();
+	$("#currentRestScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -53,6 +53,9 @@ function goBack(activeDivId) {
 		case "currentSetScreen":
 			currentSetPause();
 			break;
+		case "currentRestScreen":
+			currentRestPause();
+			break;
 	}
 }
 
@@ -60,4 +63,14 @@ function exit() {
 	tizen.power.release("SCREEN");
 	tizen.humanactivitymonitor.stop('HRM');
     tizen.application.getCurrentApplication().exit();
+}
+
+
+function preprendZerosIfNeeded(number, size) {
+	var numberLength = number.toString().length;
+	var numberOfZeroes = size - numberLength;
+	for (var i=0; i<numberOfZeroes; i++) {
+		number = "0" + number;
+	}
+	return number;
 }
