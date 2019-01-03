@@ -16,7 +16,7 @@ function setPauseScreenListeners() {
 function hidePauseScreen() {
 	$("#pauseScreen").hide();
 	if (originalScreen === "currentRestScreen") {
-		showCurrentRestScreen();
+		currentRestResume();
 	} else if (originalScreen === "currentSetScreen") {
 		currentSetResume();
 	}

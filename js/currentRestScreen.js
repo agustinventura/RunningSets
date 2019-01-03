@@ -31,7 +31,7 @@ function currentRestResume() {
 	hideAllScreens();
 	setCurrentRestScreenListeners();
 	startRestChrono();
-	$("#currentSetScreen").show();
+	$("#currentRestScreen").show();
 }
 
 function currentRestEnd() {
@@ -53,9 +53,6 @@ function stopRestChrono() {
 
 function startRest() {
 	tizen.power.request("SCREEN", "SCREEN_NORMAL");
-	for (var i=0; i<3; i++) {
-		navigator.vibrate(100);
-	}
 	restTimeOffset = -10;
 	restSeconds = new Date(restTime*1000);
 	$("#currentSetCurrentRest").text(currentSet);
@@ -73,6 +70,7 @@ function refreshRestMilliseconds() {
 		restTimeOffset = 10;
 		restEndAudio.load();
 		restEndAudio.play();
+		navigator.vibrate([1000, 1000, 1000]);
 	}
 	setCurrentRestFormattedTime();
 }
