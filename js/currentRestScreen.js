@@ -7,6 +7,7 @@ function showCurrentRestScreen() {
 	hideAllScreens();
 	loadRestEndAudio();
 	setCurrentRestScreenListeners();
+	stopRestChrono();
 	startRest();
     $("#currentRestScreen").show();
 }
@@ -61,7 +62,7 @@ function startRest() {
 }
 
 function startRestChrono() {
-	setTimer = setInterval(refreshRestMilliseconds, 10);
+	restTimer = setInterval(refreshRestMilliseconds, 10);
 }
 
 function refreshRestMilliseconds() {

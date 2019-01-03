@@ -6,6 +6,7 @@ function showCurrentSetScreen() {
 	hideAllScreens();
 	loadSetStartAudio();
 	setCurrentSetScreenListeners();
+	stopSetChrono();
 	startSet();
     $("#currentSetScreen").show();
 }
