@@ -53,22 +53,24 @@ function stopRestChrono() {
 
 function startRest() {
 	tizen.power.request("SCREEN", "SCREEN_NORMAL");
-	navigator.vibrate(500);
-	restTimeOffset = -1;
-	restSeconds = new Date(restTime);
+	for (var i=0; i<3; i++) {
+		navigator.vibrate(100);
+	}
+	restTimeOffset = -10;
+	restSeconds = new Date(restTime*1000);
 	$("#currentSetCurrentRest").text(currentSet);
 	$("#totalSetsCurrentRest").text(sets);
 	startRestChrono();
 }
 
 function startRestChrono() {
-	setTimer = setInterval(refreshRestMilliseconds, 1000);
+	setTimer = setInterval(refreshRestMilliseconds, 10);
 }
 
 function refreshRestMilliseconds() {
-	restSeconds.setSeconds(restSeconds.getSeconds() + restTimeOffset);
+	restSeconds.setMilliseconds(restSeconds.getMilliseconds() + restTimeOffset);
 	if (restSeconds.getMilliseconds() === 0 && restSeconds.getSeconds() === 0 && restSeconds.getMinutes() === 0) {
-		restTimeOffset = 1;
+		restTimeOffset = 10;
 		restEndAudio.load();
 		restEndAudio.play();
 	}
@@ -80,6 +82,6 @@ function setCurrentRestFormattedTime() {
 	$("#currentRestMinutes").text(formattedMinutes);
 	var formattedSeconds = preprendZerosIfNeeded(restSeconds.getSeconds(), 2);
 	$("#currentRestSeconds").text(formattedSeconds);
-	var formattedMilliseconds = preprendZerosIfNeeded(restSeconds.getMilliseconds(), 3);
+	var formattedMilliseconds = preprendZerosIfNeeded(Math.round(restSeconds.getMilliseconds()/10), 2);
 	$("#currentRestMilliseconds").text(formattedMilliseconds);
 }
