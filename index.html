@@ -17,6 +17,7 @@
 <script src="js/currentSetScreen.js"></script>
 <script src="js/pauseScreen.js"></script>
 <script src="js/currentRestScreen.js"></script>
+<script src="js/endScreen.js"></script>
 <script src="js/runningSets.js"></script>
 <script src="js/framework.js"></script>
 </head>
@@ -26,18 +27,18 @@
 		<div class="container">
 			<div id="setsScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseSets" src="./img/decrease.png" alt="Decrease sets"/>
+					<img id="decreaseSets" src="./img/decrease.png" alt="Decrease sets" />
 				</div>
 				<p>Series</p>
 				<div class="increase">
-					<img id="increaseSets" src="./img/increase.png" alt="Increase sets"/>
+					<img id="increaseSets" src="./img/increase.png" alt="Increase sets" />
 				</div>
 			</div>
 			<div class="txt">
 				<div class="numberWithArrows">
-					<img id="upArrowSets" src="./img/up.png" alt="Increase sets"/>
+					<img id="upArrowSets" src="./img/up.png" alt="Increase sets" />
 					<p id="setsNumber" class="txt-msg-center">5</p>
-					<img id="downArrowSets" src="./img/down.png" alt="Decrease sets"/>
+					<img id="downArrowSets" src="./img/down.png" alt="Decrease sets" />
 				</div>
 			</div>
 			<button id="setsDone" class="btnbottom">Ya</button>
@@ -47,52 +48,43 @@
 		<div class="container">
 			<div id="distanceScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseDistance" src="./img/decrease.png" alt="Decrease distance"/>
+					<img id="decreaseDistance" src="./img/decrease.png"
+						alt="Decrease distance" />
 				</div>
 				<p>Distancia</p>
 				<div class="increase">
-					<img id="increaseDistance" src="./img/increase.png" alt="Increase distance"/>
+					<img id="increaseDistance" src="./img/increase.png"
+						alt="Increase distance" />
 				</div>
 			</div>
 			<div class="txt">
 				<div class="magnitude">
 					<table class="numberWithArrows">
 						<tr>
-							<td class="firstColumn">
-								<img id="upArrowDistanceHectometers" src="./img/up.png" alt="Increase hectometers"/>
-							</td>
-							<td>
-								<img id="upArrowDistanceDecameters" src="./img/up.png" alt="Increase decameters"/>
-							</td>
-							<td class="thirdColumn">
-								<img id="upArrowDistanceMeters" src="./img/up.png" alt="Increase meters"/>
-							</td>
-							<td>
-							</td>
+							<td class="firstColumn"><img id="upArrowDistanceHectometers"
+								src="./img/up.png" alt="Increase hectometers" /></td>
+							<td><img id="upArrowDistanceDecameters" src="./img/up.png"
+								alt="Increase decameters" /></td>
+							<td class="thirdColumn"><img id="upArrowDistanceMeters"
+								src="./img/up.png" alt="Increase meters" /></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td class="firstColumn">
-								<span id="hectometers" class="txt-msg-center">0</span>
-							</td>
-							<td>
-								<span id="decameters" class="txt-msg-center">0</span>
-							</td>
-							<td class="thirdColumn">
-								<span id="meters" class="txt-msg-center">0</span>
-							</td>
+							<td class="firstColumn"><span id="hectometers"
+								class="txt-msg-center">0</span></td>
+							<td><span id="decameters" class="txt-msg-center">0</span></td>
+							<td class="thirdColumn"><span id="meters"
+								class="txt-msg-center">0</span></td>
 						</tr>
 						<tr>
-							<td class="firstColumn">
-								<img id="downArrowDistanceHectometers" src="./img/down.png" alt="Decrease hectometers"/>
-							</td>
-							<td>
-								<img id="downArrowDistanceDecameters" src="./img/down.png" alt="Decrease decameters"/>
-							</td>
-							<td class="thirdColumn">
-								<img id="downArrowDistanceMeters" src="./img/down.png" alt="Decrease meters"/>
-							</td>
-							<td>
-							</td>
+							<td class="firstColumn"><img
+								id="downArrowDistanceHectometers" src="./img/down.png"
+								alt="Decrease hectometers" /></td>
+							<td><img id="downArrowDistanceDecameters"
+								src="./img/down.png" alt="Decrease decameters" /></td>
+							<td class="thirdColumn"><img id="downArrowDistanceMeters"
+								src="./img/down.png" alt="Decrease meters" /></td>
+							<td></td>
 						</tr>
 					</table>
 				</div>
@@ -107,52 +99,44 @@
 		<div class="container">
 			<div id="restTimeScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseRestTime" src="./img/decrease.png" alt="Decrease rest time"/>
+					<img id="decreaseRestTime" src="./img/decrease.png"
+						alt="Decrease rest time" />
 				</div>
 				<p>Descanso</p>
 				<div class="increase">
-					<img id="increaseRestTime" src="./img/increase.png" alt="Increase rest time"/>
+					<img id="increaseRestTime" src="./img/increase.png"
+						alt="Increase rest time" />
 				</div>
 			</div>
 			<div class="txt">
 				<div class="magnitude">
 					<table class="numberWithArrows">
 						<tr>
-							<td class="firstColumn">
-								<img id="upArrowRestTimeHectoseconds" src="./img/up.png" alt="Increase hectoseconds"/>
-							</td>
-							<td>
-								<img id="upArrowRestTimeDecaseconds" src="./img/up.png" alt="Increase decaseconds"/>
-							</td>
-							<td class="thirdColumn">
-								<img id="upArrowRestTimeSeconds" src="./img/up.png" alt="Increase seconds"/>
-							</td>
-							<td>
-							</td>
+							<td class="firstColumn"><img
+								id="upArrowRestTimeHectoseconds" src="./img/up.png"
+								alt="Increase hectoseconds" /></td>
+							<td><img id="upArrowRestTimeDecaseconds" src="./img/up.png"
+								alt="Increase decaseconds" /></td>
+							<td class="thirdColumn"><img id="upArrowRestTimeSeconds"
+								src="./img/up.png" alt="Increase seconds" /></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td class="firstColumn">
-								<span id="hectoseconds" class="txt-msg-center">0</span>
-							</td>
-							<td>
-								<span id="decaseconds" class="txt-msg-center">0</span>
-							</td>
-							<td class="thirdColumn">
-								<span id="seconds" class="txt-msg-center">0</span>
-							</td>
+							<td class="firstColumn"><span id="hectoseconds"
+								class="txt-msg-center">0</span></td>
+							<td><span id="decaseconds" class="txt-msg-center">0</span></td>
+							<td class="thirdColumn"><span id="seconds"
+								class="txt-msg-center">0</span></td>
 						</tr>
 						<tr>
-							<td class="firstColumn">
-								<img id="downArrowRestTimeHectoseconds" src="./img/down.png" alt="Decrease hectoseconds"/>
-							</td>
-							<td>
-								<img id="downArrowRestTimeDecaseconds" src="./img/down.png" alt="Decrease decaseconds"/>
-							</td>
-							<td class="thirdColumn">
-								<img id="downArrowRestTimeSeconds" src="./img/down.png" alt="Decrease seconds"/>
-							</td>
-							<td>
-							</td>
+							<td class="firstColumn"><img
+								id="downArrowRestTimeHectoseconds" src="./img/down.png"
+								alt="Decrease hectoseconds" /></td>
+							<td><img id="downArrowRestTimeDecaseconds"
+								src="./img/down.png" alt="Decrease decaseconds" /></td>
+							<td class="thirdColumn"><img id="downArrowRestTimeSeconds"
+								src="./img/down.png" alt="Decrease seconds" /></td>
+							<td></td>
 						</tr>
 					</table>
 				</div>
@@ -168,36 +152,29 @@
 			<button id="notReady" class="btntop">No</button>
 			<div class="txt">
 				<table class="sumUpData">
-						<tr>
-							<td colspan="2" class="sumUpTitle">
-								<span id="setsReview" class="txt-msg">¿Listo?</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="leftCell">
-								<span id="setsReview" class="txt-msg">Series</span>
-							</td>
-							<td class="rightCell">
-								<span id="totalSetsReview" class="txt-msg">0</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="leftCell">
-								<span id="distanceReview" class="txt-msg">Distancia</span>
-							</td>
-							<td class="rightCell">
-								<span id="distancePerSet" class="txt-msg">0</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="leftCell">
-								<span id="restTimeReview" class="txt-msg">Descanso</span>
-							</td>
-							<td class="rightCell">
-								<span id="restTimePerSet" class="txt-msg">0</span>
-							</td>
-						</tr>
-					</table>
+					<tr>
+						<td colspan="2" class="sumUpTitle"><span id="setsReview"
+							class="txt-msg">¿Listo?</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span id="setsReview" class="txt-msg">Series</span>
+						</td>
+						<td class="rightCell"><span id="totalSetsReview"
+							class="txt-msg">0</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span id="distanceReview"
+							class="txt-msg">Distancia</span></td>
+						<td class="rightCell"><span id="distancePerSet"
+							class="txt-msg">0</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span id="restTimeReview"
+							class="txt-msg">Descanso</span></td>
+						<td class="rightCell"><span id="restTimePerSet"
+							class="txt-msg">0</span></td>
+					</tr>
+				</table>
 			</div>
 			<button id="letsgo" class="btnbottom">Si</button>
 		</div>
@@ -211,36 +188,32 @@
 		<div class="container">
 			<div id="currentSetScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseCurrentSet" src="./img/decrease.png" alt="End current set"/>
+					<img id="decreaseCurrentSet" src="./img/decrease.png"
+						alt="End current set" />
 				</div>
 				<table>
 					<tr>
-						<td colspan="3">
-						Serie
-						</td>
+						<td colspan="3">Serie</td>
 					</tr>
 					<tr>
-						<td id="currentSet">
-						0
-						</td>
-						<td>
-						/
-						</td>
-						<td id="totalSets">
-						0
-						</td>
+						<td id="currentSet">0</td>
+						<td>/</td>
+						<td id="totalSets">0</td>
 					</tr>
 				</table>
 				<div class="increase">
-					<img id="increaseCurrentSet" src="./img/increase.png" alt="End current set"/>
+					<img id="increaseCurrentSet" src="./img/increase.png"
+						alt="End current set" />
 				</div>
 			</div>
 			<div class="txt">
 				<div class="txt-msg-center">
-					<span id="currentSetMinutes">00</span>:<span id="currentSetSeconds">00</span><span id="currentSetMilliseconds" class="txt-msg">00</span>
+					<span id="currentSetMinutes">00</span>:<span id="currentSetSeconds">00</span><span
+						id="currentSetMilliseconds" class="txt-msg">00</span>
 				</div>
 				<div class="txt-msg-bpm">
-					<span id="setBPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
+					<span id="setBPM">000</span>&nbsp;<span id="currentSetBPM"
+						class="txt-msg">BPM</span>
 				</div>
 			</div>
 			<button id="currentSetDone" class="btnbottom">Terminé</button>
@@ -261,39 +234,74 @@
 		<div class="container">
 			<div id="currentRestScreenTitle" class="titletop">
 				<div class="decrease">
-					<img id="decreaseCurrentRest" src="./img/decrease.png" alt="End current rest"/>
+					<img id="decreaseCurrentRest" src="./img/decrease.png"
+						alt="End current rest" />
 				</div>
 				<table>
 					<tr>
-						<td colspan="3">
-						Descanso
-						</td>
+						<td colspan="3">Descanso</td>
 					</tr>
 					<tr>
-						<td id="currentSetCurrentRest">
-						0
-						</td>
-						<td>
-						/
-						</td>
-						<td id="totalSetsCurrentRest">
-						0
-						</td>
+						<td id="currentSetCurrentRest">0</td>
+						<td>/</td>
+						<td id="totalSetsCurrentRest">0</td>
 					</tr>
 				</table>
 				<div class="increase">
-					<img id="increaseCurrentRest" src="./img/increase.png" alt="End current rest"/>
+					<img id="increaseCurrentRest" src="./img/increase.png"
+						alt="End current rest" />
 				</div>
 			</div>
 			<div class="txt">
 				<div class="txt-msg-center">
-					<span id="currentRestMinutes">00</span>:<span id="currentRestSeconds">00</span><span id="currentRestMilliseconds" class="txt-msg">00</span>
+					<span id="currentRestMinutes">00</span>:<span
+						id="currentRestSeconds">00</span><span
+						id="currentRestMilliseconds" class="txt-msg">00</span>
 				</div>
 				<div class="txt-msg-bpm">
-					<span id="currentRestBPM">000</span>&nbsp;<span id="currentRestBPMtext" class="txt-msg">BPM</span>
+					<span id="currentRestBPM">000</span>&nbsp;<span
+						id="currentRestBPMtext" class="txt-msg">BPM</span>
 				</div>
 			</div>
 			<button id="currentRestDone" class="btnbottom">¡Vamos!</button>
+		</div>
+	</div>
+	<div id="endScreen" class="clock">
+		<div class="container">
+			<div id="endScreenTitle" class="titletop">
+				<p>¡Felicidades!</p>
+			</div>
+			<p>&nbsp;</p>
+			<div class="txt">
+				<table class="sumUpData">
+					<tr>
+						<td colspan="2" class="sumUpTitle"><span id="trainSumUp"
+							class="txt-msg">Resumen</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span class="txt-msg">Series</span></td>
+						<td class="rightCell"><span id="finishedSets" class="txt-msg">0</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span class="txt-msg">Distancia</span></td>
+						<td class="rightCell"><span id="totalDistance"
+							class="txt-msg">0</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span class="txt-msg">Tiempo<br/>
+								Medio</span></td>
+						<td class="rightCell"><span id="averageSetTime"
+							class="txt-msg">0</span></td>
+					</tr>
+					<tr>
+						<td class="leftCell"><span class="txt-msg">Descanso<br/>
+								Medio</span></td>
+						<td class="rightCell"><span id="averageRestTime"
+							class="txt-msg">0</span></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 </body>

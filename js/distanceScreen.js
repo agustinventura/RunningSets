@@ -7,6 +7,7 @@ function initDistances() {
 function showDistanceScreen() {
 	hideAllScreens();
 	setDistanceScreenListeners();
+	distance = 50;
 	setDistancesText();
 	$("#distanceScreen").show();
 }

@@ -1,6 +1,7 @@
 function showSetsScreen() {
 	hideAllScreens();
 	setSetsScreenListeners();
+	currentSet = 0;
     $("#setsNumber").text(sets);
     $("#setsScreen").show();
 }

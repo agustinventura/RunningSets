@@ -37,7 +37,7 @@ function currentSetResume() {
 function currentSetEnd() {
 	clearCurrentSetState();
 	if (currentSet === sets) {
-		//showEndScreen();
+		showEndScreen();
 	} else {
 		showCurrentRestScreen();
 	}

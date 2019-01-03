@@ -7,6 +7,7 @@ function hideAllScreens() {
 	$("#currentSetScreen").hide();
 	$("#pauseScreen").hide();
 	$("#currentRestScreen").hide();
+	$("#endScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -55,6 +56,12 @@ function goBack(activeDivId) {
 			break;
 		case "currentRestScreen":
 			currentRestPause();
+			break;
+		case "pauseScreen":
+			hidePauseScreen();
+			break;
+		case "endScreen":
+			showSetsScreen();
 			break;
 	}
 }

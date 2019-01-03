@@ -7,6 +7,7 @@ function initRestTime() {
 function showRestTimeScreen() {
 	hideAllScreens();
 	setRestTimeScreenListeners();
+	restTime = 60;
 	setTimesText();
 	$("#restTimeScreen").show();
 }
