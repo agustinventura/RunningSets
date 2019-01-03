@@ -4,6 +4,7 @@ function showReadyScreen() {
 	$("#totalSetsReview").text(sets);
 	$("#distancePerSet").text(parseInt(distance) + " m");
 	$("#restTimePerSet").text(parseInt(restTime) + " s");
+	training = getNewTraining();
 	$("#readyScreen").show();
 }
 

@@ -35,12 +35,17 @@ function currentSetResume() {
 }
 
 function currentSetEnd() {
+	updateTrainingSet();
 	clearCurrentSetState();
 	if (currentSet === sets) {
 		showEndScreen();
 	} else {
 		showCurrentRestScreen();
 	}
+}
+
+function updateTrainingSet() {
+	training.totalSetsTime.setTime(training.totalSetsTime.getTime() + setSeconds.getTime());
 }
 
 function clearCurrentSetState() {

@@ -37,7 +37,12 @@ function currentRestResume() {
 
 function currentRestEnd() {
 	clearCurrentSetState();
+	updateTrainingRest();
 	showCountdownScreen();
+}
+
+function updateTrainingRest() {
+	training.totalRestTime.setTime(training.totalRestTime.getTime() + restSeconds.getTime());
 }
 
 function clearCurrentRestState() {
