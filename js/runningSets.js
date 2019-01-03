@@ -19,13 +19,19 @@ var restTime = 60;
 var selectedRestTime = TimesEnum.SECONDS;
 var countdownSeconds = 3;
 var currentSet = 0;
-var milliseconds = new Date(0);
 
 function init() {
 	setBackKeyListener();
+	tizen.humanactivitymonitor.start('HRM', hrmListener);
 	initDistances();
 	initRestTime();
 	showSetsScreen();
+}
+
+function hrmListener(hrmInfo) {
+	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
+	$("#setBPM").text(currentHeartRate);
+	$("#currentRestBPM").text(currentHeartRate);
 }
 
 $(document).ready(init);

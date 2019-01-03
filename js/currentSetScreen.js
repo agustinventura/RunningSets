@@ -1,5 +1,6 @@
 var setStartAudio = null;
 var setTimer = null;
+var setSeconds = null;
 
 function showCurrentSetScreen() {
 	hideAllScreens();
@@ -42,11 +43,10 @@ function currentSetEnd() {
 }
 
 function clearCurrentSetState() {
-	setStartAudio = null;
-	milliseconds = null;
 	stopSetChrono();
+	setStartAudio = null;
+	setSeconds = null;
 	tizen.power.release("SCREEN");
-	tizen.humanactivitymonitor.stop('HRM');
 }
 
 function stopSetChrono() {
@@ -59,33 +59,27 @@ function startSet() {
 	navigator.vibrate(500);
 	setStartAudio.load();
 	setStartAudio.play();
-	milliseconds = new Date(0);
+	setSeconds = new Date(0);
 	currentSet++;
 	$("#currentSet").text(currentSet);
 	$("#totalSets").text(sets);
 	startSetChrono();
-	tizen.humanactivitymonitor.start('HRM', setHrmListener);
 }
 
 function startSetChrono() {
-	setTimer = setInterval(refreshSetMilliseconds, 1);
-}
-
-function setHrmListener(hrmInfo) {
-	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
-	$("#setBPM").text(currentHeartRate);
+	setTimer = setInterval(refreshSetMilliseconds, 10);
 }
 
 function refreshSetMilliseconds() {
-	milliseconds.setMilliseconds(milliseconds.getMilliseconds()+1);
+	setSeconds.setMilliseconds(setSeconds.getMilliseconds()+10);
 	setCurrentSetFormattedTime();
 }
 
 function setCurrentSetFormattedTime() {
-	var formattedMinutes = preprendZerosIfNeeded(milliseconds.getMinutes(), 2);
+	var formattedMinutes = preprendZerosIfNeeded(setSeconds.getMinutes(), 2);
 	$("#currentSetMinutes").text(formattedMinutes);
-	var formattedSeconds = preprendZerosIfNeeded(milliseconds.getSeconds(), 2);
+	var formattedSeconds = preprendZerosIfNeeded(setSeconds.getSeconds(), 2);
 	$("#currentSetSeconds").text(formattedSeconds);
-	var formattedMilliseconds = preprendZerosIfNeeded(milliseconds.getMilliseconds(), 3);
+	var formattedMilliseconds = preprendZerosIfNeeded(Math.round(setSeconds.getMilliseconds()/10), 2);
 	$("#currentSetMilliseconds").text(formattedMilliseconds);
 }

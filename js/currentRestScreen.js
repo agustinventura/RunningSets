@@ -1,6 +1,7 @@
 var restEndAudio = null;
 var restTimer = null;
 var restTimeOffset = null;
+var restSeconds = null;
 
 function showCurrentRestScreen() {
 	hideAllScreens();
@@ -39,41 +40,34 @@ function currentRestEnd() {
 }
 
 function clearCurrentRestState() {
-	restEndAudio = null;
-	milliseconds = null;
 	stopRestChrono();
+	restEndAudio = null;
+	restSeconds = null;
 	tizen.power.release("SCREEN");
-	tizen.humanactivitymonitor.stop('HRM');
 }
 
 function stopRestChrono() {
 	clearInterval(restTimer);
-	setTimer = null;
+	restTimer = null;
 }
 
 function startRest() {
 	tizen.power.request("SCREEN", "SCREEN_NORMAL");
 	navigator.vibrate(500);
 	restTimeOffset = -1;
-	milliseconds = new Date(restTime*1000);
-	$("#currentSetCurentRest").text(currentSet);
+	restSeconds = new Date(restTime);
+	$("#currentSetCurrentRest").text(currentSet);
 	$("#totalSetsCurrentRest").text(sets);
 	startRestChrono();
-	tizen.humanactivitymonitor.start('HRM', restHrmListener);
 }
 
 function startRestChrono() {
-	setTimer = setInterval(refreshRestMilliseconds, 1);
-}
-
-function restHrmListener(hrmInfo) {
-	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
-	$("#currentRestBPM").text(currentHeartRate);
+	setTimer = setInterval(refreshRestMilliseconds, 1000);
 }
 
 function refreshRestMilliseconds() {
-	milliseconds.setMilliseconds(milliseconds.getMilliseconds() + restTimeOffset);
-	if (milliseconds.getMilliseconds() === 0 && milliseconds.getMinutes() === 0 && milliseconds.getHours() === 0) {
+	restSeconds.setSeconds(restSeconds.getSeconds() + restTimeOffset);
+	if (restSeconds.getMilliseconds() === 0 && restSeconds.getSeconds() === 0 && restSeconds.getMinutes() === 0) {
 		restTimeOffset = 1;
 		restEndAudio.load();
 		restEndAudio.play();
@@ -82,10 +76,10 @@ function refreshRestMilliseconds() {
 }
 
 function setCurrentRestFormattedTime() {
-	var formattedMinutes = preprendZerosIfNeeded(milliseconds.getMinutes(), 2);
+	var formattedMinutes = preprendZerosIfNeeded(restSeconds.getMinutes(), 2);
 	$("#currentRestMinutes").text(formattedMinutes);
-	var formattedSeconds = preprendZerosIfNeeded(milliseconds.getSeconds(), 2);
+	var formattedSeconds = preprendZerosIfNeeded(restSeconds.getSeconds(), 2);
 	$("#currentRestSeconds").text(formattedSeconds);
-	var formattedMilliseconds = preprendZerosIfNeeded(milliseconds.getMilliseconds(), 3);
+	var formattedMilliseconds = preprendZerosIfNeeded(restSeconds.getMilliseconds(), 3);
 	$("#currentRestMilliseconds").text(formattedMilliseconds);
 }
