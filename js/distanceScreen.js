@@ -1,7 +1,7 @@
 function initDistances() {
-	distances.set(DistancesEnum.METERS, 0);
-	distances.set(DistancesEnum.DECAMETERS, 5);
-	distances.set(DistancesEnum.HECTOMETERS, 0);
+	distances[DistancesEnum.METERS] = 0;
+	distances[DistancesEnum.DECAMETERS] = 5;
+	distances[DistancesEnum.HECTOMETERS] = 0;
 }
 
 function showDistanceScreen() {
@@ -14,7 +14,7 @@ function showDistanceScreen() {
 
 function setDistancesText() {
 	for (var distance in DistancesEnum) {
-		$("#"+DistancesEnum[distance]).text(distances.get(DistancesEnum[distance]));
+		$("#"+DistancesEnum[distance]).text(distances[DistancesEnum[distance]]);
 	}
 }
 
@@ -77,7 +77,7 @@ function decreaseMeters() {
 }
 
 function setDistance() {
-	distance = distances.get(DistancesEnum.HECTOMETERS) + "" + distances.get(DistancesEnum.DECAMETERS) + "" + distances.get(DistancesEnum.METERS);
+	distance = distances[DistancesEnum.HECTOMETERS] + "" + distances[DistancesEnum.DECAMETERS] + "" + distances[DistancesEnum.METERS];
 	showRestTimeScreen();
 }
 
@@ -91,19 +91,19 @@ function distanceChange(ev) {
 }
 
 function decreaseDistance() {
-	var distance = distances.get(selectedDistance);
+	var distance = distances[selectedDistance];
     if (distance > 0) {
         distance--;
-        distances.set(selectedDistance, distance);
-        $("#"+selectedDistance).text(distances.get(selectedDistance));
+        distances[selectedDistance] = distance;
+        $("#"+selectedDistance).text(distances[selectedDistance]);
     }
 }
 
 function increaseDistance() {
-	var distance = distances.get(selectedDistance);
+	var distance = distances[selectedDistance];
     if (distance < 9) {
         distance++;
-        distances.set(selectedDistance, distance);
-        $("#"+selectedDistance).text(distances.get(selectedDistance));
+        distances[selectedDistance] = distance;
+        $("#"+selectedDistance).text(distances[selectedDistance]);
     }
 }

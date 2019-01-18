@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://www.digitalsingular.com/RunningSets" version="1.0.0" viewmodes="maximized">
-    <tizen:application id="TJzw4cykBu.RunningSets" package="TJzw4cykBu" required_version="3.0"/>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://www.digitalsingular.com/RunningSets" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="TJzw4cykBu.RunningSets" package="TJzw4cykBu" required_version="2.3.2"/>
     <author href="http://www.digitalsingular.com" email="agustinventura@gmail.com">Agustín Ventura Carrasco</author>
     <content src="index.html"/>
     <description xml:lang="es-es">Running Sets te permite controlar tus series de running fácilmente. Introduce el número de series que quieres hacer, la distancia y el tiempo de descanso y la aplicación te irá avisando cada vez que tengas que empezar una serie nueva. Podrás indicar que has acabado una serie sencillamente girando la corona.</description>
@@ -11,4 +11,5 @@
     <tizen:privilege name="http://tizen.org/privilege/power"/>
     <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
     <tizen:profile name="wearable"/>
+    <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
 </widget>

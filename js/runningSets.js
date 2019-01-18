@@ -11,10 +11,18 @@ TimesEnum = {
 }
 
 var sets = 6;
-var distances = new Map();
+var distances = {
+		meters: 0,
+		decameters: 0,
+		hectometers: 0,
+};
 var distance = 50;
 var selectedDistance = DistancesEnum.DECAMETERS;
-var times = new Map();
+var times = {
+		seconds: 0,
+		decaseconds: 0,
+		hectoseconds: 0,
+};
 var restTime = 60;
 var selectedRestTime = TimesEnum.SECONDS;
 var countdownSeconds = 3;

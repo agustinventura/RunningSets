@@ -1,7 +1,7 @@
 function initRestTime() {
-	times.set(TimesEnum.SECONDS, 0);
-	times.set(TimesEnum.DECASECONDS, 6);
-	times.set(TimesEnum.HECTOSECONDS, 0);
+	times[TimesEnum.SECONDS] = 0;
+	times[TimesEnum.DECASECONDS] = 6;
+	times[TimesEnum.HECTOSECONDS] = 0;
 }
 
 function showRestTimeScreen() {
@@ -14,7 +14,7 @@ function showRestTimeScreen() {
 
 function setTimesText() {
 	for (var time in TimesEnum) {
-		$("#"+TimesEnum[time]).text(times.get(TimesEnum[time]));
+		$("#"+TimesEnum[time]).text(times[TimesEnum[time]]);
 	}
 }
 
@@ -77,7 +77,7 @@ function decreaseSeconds() {
 }
 
 function setTime() {
-	restTime = times.get(TimesEnum.HECTOSECONDS) + "" + times.get(TimesEnum.DECASECONDS) + "" + times.get(TimesEnum.SECONDS);
+	restTime = times[TimesEnum.HECTOSECONDS] + "" + times[TimesEnum.DECASECONDS] + "" + times[TimesEnum.SECONDS];
 	showReadyScreen();
 }
 
@@ -91,19 +91,19 @@ function timeChange(ev) {
 }
 
 function decreaseTime() {
-	var time = times.get(selectedRestTime);
+	var time = times[selectedRestTime];
     if (time > 0) {
     	time--;
-    	times.set(selectedRestTime, time);
-        $("#"+selectedRestTime).text(times.get(selectedRestTime));
+    	times[selectedRestTime] = time;
+        $("#"+selectedRestTime).text(times[selectedRestTime]);
     }
 }
 
 function increaseTime() {
-	var time = times.get(selectedRestTime);
+	var time = times[selectedRestTime];
     if (time < 9) {
         time++;
-        times.set(selectedRestTime, time);
-        $("#"+selectedRestTime).text(times.get(selectedRestTime));
+        times[selectedRestTime] = time;
+        $("#"+selectedRestTime).text(times[selectedRestTime]);
     }
 }
