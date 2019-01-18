@@ -14,8 +14,11 @@
    viewBox="0 0 170 170"
    version="1.1"
    id="SVGRoot"
-   inkscape:version="0.92.3 (5aff6ba, 2018-11-25)"
-   sodipodi:docname="icon.svg">
+   inkscape:version="0.92.4 (ca053d0, 2019-01-16)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/home/agustin/Development/Tizen/workspace/RunningSets/icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs3721">
     <marker
@@ -104,7 +107,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -118,27 +121,14 @@
        cy="84.976562"
        style="fill:#f2ae30;fill-opacity:1;stroke-width:1.00612891"
        r="85" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot4543"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#bf1111;fill-opacity:1;stroke:#bf1111;stroke-opacity:1"
-       transform="matrix(1.8629502,0,0,1.8081131,-73.178502,-34.991041)"><flowRegion
-         id="flowRegion4545"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#bf1111;fill-opacity:1;stroke:#bf1111;stroke-opacity:1"><rect
-           id="rect4547"
-           width="143.9211"
-           height="73.486626"
-           x="11.739078"
-           y="43.687527"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#bf1111;fill-opacity:1;stroke:#bf1111;stroke-opacity:1" /></flowRegion><flowPara
-         id="flowPara4549">R S</flowPara></flowRoot>    <path
-       style="fill:#f28f16;fill-opacity:1;stroke:#d95a11;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart)"
-       d="m 28.518041,141.13107 117.625549,0.46956"
+    <path
+       style="fill:#f28f16;fill-opacity:1;stroke:#d95a11;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:18,3;stroke-opacity:1;marker-start:url(#Arrow2Lstart);stroke-dashoffset:0"
+       d="M 28.518041,97.13107 146.14359,97.60063"
        id="path4551"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#f28f16;fill-opacity:1;stroke:#d95a11;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-4)"
-       d="M 141.1345,31.30556 23.508953,31.77512"
+       d="M 141.1345,65.30556 23.508953,65.77512"
        id="path4551-6"
        inkscape:connector-curvature="0" />
   </g>
